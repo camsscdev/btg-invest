@@ -1,0 +1,49 @@
+.catalog-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f4f7;
+    padding: 20px 30px;
+    border-radius: 8px;
+}
+
+.catalog-text h1 {
+    margin: 0 0 8px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #1f2a44;
+}
+
+.catalog-text p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+    max-width: 600px;
+}
+
+.balance-card {
+    background-color: #e5e7eb;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: right;
+    min-width: 200px;
+}
+
+.balance-label {
+    display: block;
+    font-size: 11px;
+    color: #6b7280;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.balance-amount {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1f2a44;
+}
+
+.balance-card small {
+    font-size: 12px;
+    font-weight: 500;
+}

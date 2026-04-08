@@ -1,0 +1,20 @@
+<div
+  class="flex flex-column md:flex-row md:align-items-center md:justify-content-between p-4 border-round bg-gray-50 gap-3"
+>
+  <div class="max-w-30rem">
+    <h1 class="m-0 mb-2 text-2xl font-bold text-900">Catálogo de Fondos</h1>
+    <p class="m-0 text-sm text-600">
+      Explore nuestra selección exclusiva de fondos de inversión colectiva y fondos de pensiones
+      voluntarias diseñadas para su crecimiento patrimonial.
+    </p>
+  </div>
+
+  <div class="bg-primary-50 p-3 border-round md:text-right min-w-12rem">
+    <span class="block text-xs text-500 mb-1"> SALDO DISPONIBLE </span>
+    <span class="text-lg font-semibold text-900">
+      {{ user().balance | currency: 'COP ' : 'symbol' : '1.0-0' }}
+    </span>
+  </div>
+</div>
+
+<app-card [founds]="founds()" [balance]="user().balance" />

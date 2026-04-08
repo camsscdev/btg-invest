@@ -1,0 +1,40 @@
+<div class="grid investments">
+  @for (fund of founds(); track $index) {
+    <div class="col-12 md:col-12 lg:col-6">
+      <div class="card">
+        <div class="flex justify-content-between align-items-center">
+          <h3 class="title">{{ fund.name }}</h3>
+          <span class="bg-orange-100 px-2 font-medium text-sm border-round">{{ fund.type }}</span>
+        </div>
+
+        <p class="description">
+          {{ fund.description }}
+        </p>
+
+        <div class="amount-box">
+          <div class="flex justify-content-between">
+            <small>Monto Mínimo</small>
+            <div class="amount">
+              {{ fund.minimumAmount | currency: 'COP ' : 'symbol' : '1.0-0' }}
+            </div>
+          </div>
+
+          <input
+            pInputText
+            type="text"
+            onlyNumbers
+            placeholder="Ingrese monto a invertir"
+            class="w-full input"
+            maxlength="8"
+            [(ngModel)]="fund.amount"
+          />
+        </div>
+
+        <button class="subscribe-btn" (click)="subscribeFound()">
+          Suscribirse <span class="arrow">→</span>
+        </button>
+      </div>
+    </div>
+  }
+</div>
+<p-toast></p-toast>

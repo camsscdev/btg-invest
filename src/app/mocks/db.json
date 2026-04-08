@@ -1,0 +1,60 @@
+{
+  "funds": [
+    {
+      "id": 1,
+      "name": "FPV_BTG_PACTUAL_RECAUDADORA",
+      "minimumAmount": 75000,
+      "currency": "COP",
+      "type": "FPV",
+      "description": "Fondo conservador enfocado en la preservación de capital con rendimientos estables."
+    },
+    {
+      "id": 2,
+      "name": "FPV_BTG_PACTUAL_ECOPETROL",
+      "minimumAmount": 125000,
+      "currency": "COP",
+      "type": "FPV",
+      "description": "Fondo de inversión ligado al desempeño de Ecopetrol con exposición a riesgo moderado."
+    },
+    {
+      "id": 3,
+      "name": "DEUDAPRIVADA",
+      "minimumAmount": 50000,
+      "currency": "COP",
+      "type": "FIC",
+      "description": "Fondo de deuda privada que ofrece ingresos fijos mediante financiamiento a empresas."
+    },
+    {
+      "id": 4,
+      "name": "FDO-ACCIONES",
+      "minimumAmount": 250000,
+      "currency": "COP",
+      "type": "FIC",
+      "description": "Fondo de acciones que invierte en el mercado bursátil con mayor potencial de retorno y riesgo."
+    },
+    {
+      "id": 5,
+      "name": "FPV_BTG_PACTUAL_DINAMICA",
+      "minimumAmount": 100000,
+      "currency": "COP",
+      "type": "FPV",
+      "description": "Portafolio dinámico con activos diversificados que busca un crecimiento equilibrado."
+    }
+  ],
+  "users": { "id": 1, "name": "Camilo", "balance": 500000, "notificationPreference": "email" },
+
+  "subscriptions": [
+    { "id": 1, "userId": 1, "fundId": 1, "amount": 2000, "date": "2026-04-07T19:30:00" }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "userId": 1,
+      "operationType": "subscription",
+      "fundId": 1,
+      "amount": 2000,
+      "date": "2026-04-07T19:30:00",
+      "status": "confirmed"
+    }
+  ]
+}

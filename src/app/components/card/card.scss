@@ -1,0 +1,45 @@
+.investments {
+  padding: 2rem;
+
+
+  .card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    // ✨ efecto moderno
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0a2540;
+      margin-bottom: 0.5rem;
+    }
+
+    .description {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-bottom: 1rem;
+      min-height: 48px;
+    }
+
+    .amount-box {
+      background: #f3f4f6;
+      padding: 0.8rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .subscribe-btn {
+      margin-top: auto;
+    }
+  }
+}

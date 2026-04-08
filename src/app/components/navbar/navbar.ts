@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { Founds } from '../../pages/founds/founds';
 import { RouterModule } from '@angular/router';
+import TEXTS from '../../data/texts.json';
 
 @Component({
   selector: 'app-navbar',
@@ -9,4 +9,6 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./navbar.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Navbar {}
+export class Navbar {
+  texts = TEXTS;
+}

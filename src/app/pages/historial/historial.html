@@ -1,0 +1,86 @@
+<div class="historial-container flex flex-column gap-5">
+  
+  <div class="flex flex-column md:flex-row md:align-items-center md:justify-content-between p-4 border-round glass-panel shadow-2 gap-3 mb-4">
+    <div class="max-w-30rem">
+      <h2 class="m-0 text-xl font-bold" style="color: #0f172a;">{{ texts.historial.activePortfolio }}</h2>
+    </div>
+
+    <div class="p-3 border-round md:text-right min-w-12rem" style="background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(14, 165, 233, 0.1)); border: 1px solid rgba(14, 165, 233, 0.2);">
+      <span class="block text-xs font-semibold mb-1" style="color: #0284c7; letter-spacing: 0.5px;">{{ texts.founds.balance }}</span>
+      <span class="text-2xl font-bold" style="color: #0f172a;">
+        {{ user()?.balance | currency: 'COP ' : 'symbol' : '1.0-0' }}
+      </span>
+    </div>
+  </div>
+  
+  <div class="glass-panel p-4 border-round shadow-2" style="border-radius: 16px;">
+      
+      <div class="grid" *ngIf="subscriptions().length > 0; else noSubs">
+        @for (sub of subscriptions(); track sub.id) {
+          <div class="col-12 md:col-6 lg:col-4">
+              <div class="sub-card p-4 border-round h-full flex flex-column justify-content-between">
+                 <div>
+
+                    <h3 class="m-0 mb-3 text-lg">{{ sub.fund?.name }}</h3>
+                    <div class="text-sm text-600 mb-2">{{ texts.historial.investedOn }} {{ sub.date | date:'mediumDate' }}</div>
+                    <div class="text-2xl font-bold text-900 mb-4">{{ sub.amount | currency:'COP ':'symbol':'1.0-0' }}</div>
+                 </div>
+                 <button class="cancel-btn w-full p-3 border-round text-white font-medium cursor-pointer transition-colors" (click)="cancelFund(sub)">
+                     {{ texts.historial.cancelParticipation }}
+                 </button>
+              </div>
+          </div>
+        }
+      </div>
+      <ng-template #noSubs>
+         <div class="flex flex-column align-items-center justify-content-center p-5 text-center">
+            <i class="pi pi-inbox text-4xl text-400 mb-3"></i>
+            <p class="text-600 m-0">{{ texts.historial.noActiveFunds }}</p>
+         </div>
+      </ng-template>
+  </div>
+
+
+  <div class="glass-panel p-4 border-round shadow-2" style="border-radius: 16px;">
+    <h2 class="m-0 mb-4 text-xl font-bold" style="color: #0f172a;">{{ texts.historial.transactionHistory }}</h2>
+
+    <div class="table-container overflow-auto border-round border-1 border-gray-200">
+       <table class="w-full text-left border-collapse">
+          <thead class="bg-gray-50 border-bottom-1 border-gray-200">
+             <tr>
+                 <th class="p-3 text-sm font-semibold text-600">{{ texts.historial.date }}</th>
+                 <th class="p-3 text-sm font-semibold text-600">{{ texts.historial.fund }}</th>
+                 <th class="p-3 text-sm font-semibold text-600">{{ texts.historial.movement }}</th>
+                 <th class="p-3 text-sm font-semibold text-600 text-right">{{ texts.historial.amount }}</th>
+             </tr>
+          </thead>
+          <tbody>
+          
+             @for (txn of transactions(); track txn.id) {
+               <tr class="border-bottom-1 border-gray-100 hover:bg-gray-50 transition-colors">
+                  <td class="p-3 text-sm text-700">{{ txn.date | date:'MMM d, y, h:mm a' }}</td>
+                  <td class="p-3 text-sm font-medium text-800">{{ txn.fund?.name }}</td>
+                  <td class="p-3 text-sm">
+                      <span class="px-2 py-1 border-round text-xs font-bold" 
+                            [ngClass]="txn.operationType === 'subscription' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'">
+                         {{ txn.operationType === 'subscription' ? texts.historial.subscription : texts.historial.cancellation }}
+                      </span>
+                  </td>
+                  <td class="p-3 text-sm font-bold text-right"
+                      [ngClass]="txn.operationType === 'subscription' ? 'text-red-600' : 'text-green-600'">
+                      {{ txn.operationType === 'subscription' ? '-' : '+' }}{{ txn.amount | currency:'COP ':'symbol':'1.0-0' }}
+                  </td>
+               </tr>
+             }
+             @if (transactions().length === 0) {
+                 <tr>
+                    <td colspan="4" class="p-4 text-center text-500">{{ texts.historial.noTransactions }}</td>
+                 </tr>
+             }
+          </tbody>
+       </table>
+    </div>
+  </div>
+
+</div>
+<p-toast></p-toast>

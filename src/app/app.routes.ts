@@ -1,14 +1,9 @@
 import { Routes } from '@angular/router';
 import { Founds } from './pages/founds/founds';
+import { HistorialComponent } from './pages/historial/historial';
 
 export const routes: Routes = [
-  // Ruta inicial → redirige a 'found'
   { path: '', redirectTo: 'found', pathMatch: 'full' },
-
-  // Rutas principales
   { path: 'found', component: Founds },
-  //   { path: 'historial', component: HistorialComponent },
-
-  // Ruta comodín (404)
-  //   { path: '**', component: NotFoundComponent },
+  { path: 'historial', component: HistorialComponent },
 ];

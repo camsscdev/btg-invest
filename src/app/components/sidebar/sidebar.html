@@ -1,24 +1,15 @@
-<aside class="sidebar">
-  <h4>TIPO DE FONDO</h4>
-  <div class="field-checkbox">
-    <input type="checkbox" />
-    <label>FIC (Inversión Colectiva)</label>
-  </div>
-  <div class="field-checkbox">
-    <input type="checkbox" />
-    <label>FPV (Pensiones Voluntarias)</label>
-  </div>
-
-  <h4>PERFIL DE RIESGO</h4>
-  <div class="chips">
-    <span class="chip">Conservador</span>
-    <span class="chip active">Moderado</span>
-    <span class="chip">Agresivo</span>
-  </div>
-
-  <h4>NOTIFICACIONES</h4>
-  <div class="flex gap-2">
-    <button class="btn-outline">Email</button>
-    <button class="btn-outline">SMS</button>
+<aside class="sidebar glass-panel h-full" style="border-radius: 16px;">
+  <div class="sidebar-section">
+    <h4 class="text-xs font-bold text-500 mb-3 flex align-items-center gap-2">
+      <i class="pi pi-filter"></i> {{ texts.sidebar.typeTitle }}
+    </h4>
+    <div class="field-checkbox hover-bg transition-colors p-2 border-round cursor-pointer mb-2">
+      <input type="checkbox" id="fic" class="cursor-pointer" (change)="toggleType('FIC', $event.target)" />
+      <label for="fic" class="cursor-pointer font-medium text-700 ml-2">{{ texts.sidebar.ficDesc }}</label>
+    </div>
+    <div class="field-checkbox hover-bg transition-colors p-2 border-round cursor-pointer">
+      <input type="checkbox" id="fpv" class="cursor-pointer" (change)="toggleType('FPV', $event.target)" />
+      <label for="fpv" class="cursor-pointer font-medium text-700 ml-2">{{ texts.sidebar.fpvDesc }}</label>
+    </div>
   </div>
 </aside>

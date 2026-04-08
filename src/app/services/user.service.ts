@@ -12,6 +12,10 @@ export class UserService {
   private _http = inject(HttpClient);
 
   get() {
-    return this._http.get<User>(`${this.apiUrl}/users`);
+    return this._http.get<User>(`${this.apiUrl}/users/1`);
+  }
+
+  update(user: Partial<User>) {
+    return this._http.patch<User>(`${this.apiUrl}/users/1`, user);
   }
 }

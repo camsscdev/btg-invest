@@ -8,4 +8,8 @@ export interface Funds {
   name: string;
   returnRate: number;
   type: FundType;
+  notificationMethod?: string ;
+
+  textIdSectiopn:string
+  TRANSACTIONsOLVED:String | number
 }

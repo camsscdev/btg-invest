@@ -1,0 +1,53 @@
+{
+  "navbar": {
+    "explore": "Explorar Catálogo",
+    "history": "Mi Historial",
+    "support": "Soporte"
+  },
+  "founds": {
+    "title": "Catálogo de Fondos",
+    "subtitle": "Explore nuestra selección exclusiva de fondos de inversión colectiva y fondos de pensiones voluntarias diseñadas para su crecimiento patrimonial.",
+    "balance": "SALDO DISPONIBLE"
+  },
+  "sidebar": {
+    "typeTitle": "TIPO DE FONDO",
+    "ficDesc": "FIC (Inversión Colectiva)",
+    "fpvDesc": "FPV (Pensiones Voluntarias)"
+  },
+  "card": {
+    "minAmount": "Monto Mínimo",
+    "placeholder": "Ingrese monto a invertir",
+    "notification": "Notificarme por:",
+    "email": "Email",
+    "sms": "SMS",
+    "subscribe": "Suscribirse"
+  },
+  "historial": {
+    "activePortfolio": "Mi Cartera Activa",
+    "investedOn": "Invertido el:",
+    "cancelParticipation": "Cancelar Participación",
+    "noActiveFunds": "No tienes fondos activos en este momento.",
+    "transactionHistory": "Historial de Transacciones",
+    "date": "Fecha",
+    "fund": "Fondo",
+    "movement": "Movimiento",
+    "amount": "Monto",
+    "subscription": "Suscripción",
+    "cancellation": "Cancelación",
+    "noTransactions": "Ninguna transacción registrada"
+  },
+  "alerts": {
+    "invalidAmount": "Monto inválido",
+    "minAmountIs": "El monto mínimo es de",
+    "insufficientBalance": "Saldo insuficiente",
+    "fundsLowerThanRequired": "Los fondos en tu cuenta son menores al monto requerido",
+    "subscriptionSuccess": "Suscripción Exitosa",
+    "deducted": "Se descontaron",
+    "notificationVia": "Notificación vía",
+    "fundCancelled": "Fondo Cancelado",
+    "returnedToBalance": "Se devolvieron",
+    "toYourBalance": "a su saldo",
+    "errorService": "Error en servicio",
+    "cannotGetFunds": "No se pudo obtener la lista de fondos"
+  }
+}

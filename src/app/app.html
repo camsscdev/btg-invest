@@ -1,6 +1,18 @@
-<app-navbar />
+<div class="app-layout">
+  <app-navbar />
 
-<div class="flex flex-column md:flex-row">
-  <app-sidebar />
-  <router-outlet />
+  <main class="main-content flex flex-column lg:flex-row gap-4 p-4 lg:p-5 max-w-full">
+    @if (showSidebar()) {
+      <app-sidebar class="lg:w-20rem flex-shrink-0" />
+    }
+    <div class="content-wrapper flex-grow-1 min-w-0">
+      <router-outlet />
+    </div>
+  </main>
 </div>
+
+@if (loader.isLoading()) {
+  <div class="loader-overlay">
+    <i class="pi pi-spin pi-spinner text-6xl text-primary"></i>
+  </div>
+}

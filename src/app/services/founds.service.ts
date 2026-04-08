@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { inject, Injectable, signal } from '@angular/core';
 import { environment } from '../../environment/environment';
 import { Funds } from '../models/found';
 
@@ -8,6 +8,7 @@ import { Funds } from '../models/found';
 })
 export class FoundsService {
   private readonly apiUrl = environment.apiUrl;
+  public selectedTypes = signal<string[]>([]);
 
   private _http = inject(HttpClient);
 

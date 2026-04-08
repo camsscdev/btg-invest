@@ -1,7 +1,7 @@
 {
   "funds": [
     {
-      "id": 1,
+      "id": "1",
       "name": "FPV_BTG_PACTUAL_RECAUDADORA",
       "minimumAmount": 75000,
       "currency": "COP",
@@ -9,7 +9,7 @@
       "description": "Fondo conservador enfocado en la preservación de capital con rendimientos estables."
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "FPV_BTG_PACTUAL_ECOPETROL",
       "minimumAmount": 125000,
       "currency": "COP",
@@ -17,7 +17,7 @@
       "description": "Fondo de inversión ligado al desempeño de Ecopetrol con exposición a riesgo moderado."
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "DEUDAPRIVADA",
       "minimumAmount": 50000,
       "currency": "COP",
@@ -25,7 +25,7 @@
       "description": "Fondo de deuda privada que ofrece ingresos fijos mediante financiamiento a empresas."
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "FDO-ACCIONES",
       "minimumAmount": 250000,
       "currency": "COP",
@@ -33,7 +33,7 @@
       "description": "Fondo de acciones que invierte en el mercado bursátil con mayor potencial de retorno y riesgo."
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "FPV_BTG_PACTUAL_DINAMICA",
       "minimumAmount": 100000,
       "currency": "COP",
@@ -41,20 +41,367 @@
       "description": "Portafolio dinámico con activos diversificados que busca un crecimiento equilibrado."
     }
   ],
-  "users": { "id": 1, "name": "Camilo", "balance": 500000, "notificationPreference": "email" },
-
-  "subscriptions": [
-    { "id": 1, "userId": 1, "fundId": 1, "amount": 2000, "date": "2026-04-07T19:30:00" }
+  "users": [
+    {
+      "id": "1",
+      "name": "Camilo",
+      "balance": 500000,
+      "notificationPreference": "email"
+    }
   ],
+  "subscriptions": [],
   "transactions": [
     {
-      "id": 1,
+      "id": "1",
       "userId": 1,
       "operationType": "subscription",
       "fundId": 1,
       "amount": 2000,
       "date": "2026-04-07T19:30:00",
       "status": "confirmed"
+    },
+    {
+      "userId": 1,
+      "operationType": "cancellation",
+      "fundId": 1,
+      "amount": 2000,
+      "date": "2026-04-08T12:19:53.102Z",
+      "status": "confirmed",
+      "id": "-lygt8p4Fac"
+    },
+    {
+      "userId": 1,
+      "operationType": "subscription",
+      "fundId": "2",
+      "amount": 156000,
+      "date": "2026-04-08T12:20:37.144Z",
+      "status": "confirmed",
+      "id": "wOoImK2Mso0"
+    },
+    {
+      "userId": 1,
+      "operationType": "subscription",
+      "fundId": "5",
+      "amount": 101000,
+      "date": "2026-04-08T12:21:41.118Z",
+      "status": "confirmed",
+      "id": "A7ZdZT4fE-E"
+    },
+    {
+      "userId": 1,
+      "operationType": "cancellation",
+      "fundId": "2",
+      "amount": 156000,
+      "date": "2026-04-08T12:21:52.330Z",
+      "status": "confirmed",
+      "id": "O0XjlSv2acE"
+    },
+    {
+      "userId": 1,
+      "operationType": "cancellation",
+      "fundId": "5",
+      "amount": 101000,
+      "date": "2026-04-08T12:23:35.934Z",
+      "status": "confirmed",
+      "id": "af5KVniZeLU"
+    },
+    {
+      "userId": 1,
+      "operationType": "subscription",
+      "fundId": "3",
+      "amount": 60000,
+      "date": "2026-04-08T12:26:20.438Z",
+      "status": "confirmed",
+      "id": "X1m47xR3Zxc"
+    },
+    {
+      "userId": 1,
+      "operationType": "cancellation",
+      "fundId": "3",
+      "amount": 60000,
+      "date": "2026-04-08T12:26:24.829Z",
+      "status": "confirmed",
+      "id": "kerYD9L1SVU"
+    },
+    {
+      "userId": 1,
+      "operationType": "subscription",
+      "fundId": "1",
+      "amount": 80000,
+      "date": "2026-04-08T12:47:00.455Z",
+      "status": "confirmed",
+      "id": "QBn78IsoRUE"
+    },
+    {
+      "userId": 1,
+      "operationType": "cancellation",
+      "fundId": "1",
+      "amount": 80000,
+      "date": "2026-04-08T13:08:27.918Z",
+      "status": "confirmed",
+      "id": "KFp_P9v7y3Y"
+    },
+    {
+      "userId": 1,
+      "operationType": "subscription",
+      "fundId": "3",
+      "amount": 70000,
+      "date": "2026-04-08T13:11:34.027Z",
+      "status": "confirmed",
+      "id": "gyoYsH47Qas"
+    },
+    {
+      "userId": 1,
+      "operationType": "cancellation",
+      "fundId": "3",
+      "amount": 70000,
+      "date": "2026-04-08T13:11:46.203Z",
+      "status": "confirmed",
+      "id": "5VjfHAoE8Is"
+    },
+    {
+      "userId": 1,
+      "operationType": "subscription",
+      "fundId": "1",
+      "amount": 80000,
+      "date": "2026-04-08T13:15:38.492Z",
+      "status": "confirmed",
+      "id": "acCDtipu4_c"
+    },
+    {
+      "userId": 1,
+      "operationType": "cancellation",
+      "fundId": "1",
+      "amount": 80000,
+      "date": "2026-04-08T13:15:53.625Z",
+      "status": "confirmed",
+      "id": "ITjQt7zGEA0"
+    },
+    {
+      "userId": 1,
+      "operationType": "subscription",
+      "fundId": "1",
+      "amount": 80000,
+      "date": "2026-04-08T13:31:39.276Z",
+      "status": "confirmed",
+      "id": "bBlvXcs-Ojg"
+    },
+    {
+      "userId": 1,
+      "operationType": "cancellation",
+      "fundId": "1",
+      "amount": 80000,
+      "date": "2026-04-08T13:37:31.421Z",
+      "status": "confirmed",
+      "id": "neAWICYtXIQ"
+    },
+    {
+      "userId": 1,
+      "operationType": "subscription",
+      "fundId": "3",
+      "amount": 60000,
+      "date": "2026-04-08T13:44:14.435Z",
+      "status": "confirmed",
+      "id": "Le1eZz7RmQ0"
+    },
+    {
+      "userId": 1,
+      "operationType": "cancellation",
+      "fundId": "3",
+      "amount": 60000,
+      "date": "2026-04-08T13:45:22.827Z",
+      "status": "confirmed",
+      "id": "q2zeGfyrdKM"
+    },
+    {
+      "userId": 1,
+      "operationType": "subscription",
+      "fundId": "3",
+      "amount": 60000,
+      "date": "2026-04-08T13:48:58.156Z",
+      "status": "confirmed",
+      "id": "qltYnM8SY2M"
+    },
+    {
+      "userId": 1,
+      "operationType": "cancellation",
+      "fundId": "3",
+      "amount": 60000,
+      "date": "2026-04-08T13:49:07.033Z",
+      "status": "confirmed",
+      "id": "DiImjXTOPvY"
+    },
+    {
+      "userId": 1,
+      "operationType": "subscription",
+      "fundId": "1",
+      "amount": 80000,
+      "date": "2026-04-08T13:50:03.384Z",
+      "status": "confirmed",
+      "id": "EI2Da_LifXI"
+    },
+    {
+      "userId": 1,
+      "operationType": "cancellation",
+      "fundId": "1",
+      "amount": 80000,
+      "date": "2026-04-08T13:50:11.919Z",
+      "status": "confirmed",
+      "id": "Ldvxq-nHCUE"
+    },
+    {
+      "userId": 1,
+      "operationType": "subscription",
+      "fundId": "1",
+      "amount": 80000,
+      "date": "2026-04-08T14:26:50.265Z",
+      "status": "confirmed",
+      "id": "uuoySm9604I"
+    },
+    {
+      "userId": 1,
+      "operationType": "subscription",
+      "fundId": "3",
+      "amount": 60000,
+      "date": "2026-04-08T14:26:59.010Z",
+      "status": "confirmed",
+      "id": "MWPYsqNuBt8"
+    },
+    {
+      "userId": 1,
+      "operationType": "cancellation",
+      "fundId": "1",
+      "amount": 80000,
+      "date": "2026-04-08T14:27:08.020Z",
+      "status": "confirmed",
+      "id": "ErnAocnv7AM"
+    },
+    {
+      "userId": 1,
+      "operationType": "subscription",
+      "fundId": "3",
+      "amount": 60000,
+      "date": "2026-04-08T14:27:17.951Z",
+      "status": "confirmed",
+      "id": "ucWknmA5d60"
+    },
+    {
+      "userId": 1,
+      "operationType": "subscription",
+      "fundId": "5",
+      "amount": 120000,
+      "date": "2026-04-08T14:27:27.670Z",
+      "status": "confirmed",
+      "id": "Q_XQD9_BHhY"
+    },
+    {
+      "userId": 1,
+      "operationType": "cancellation",
+      "fundId": "5",
+      "amount": 120000,
+      "date": "2026-04-08T14:28:18.100Z",
+      "status": "confirmed",
+      "id": "pP3g1uIlR50"
+    },
+    {
+      "userId": 1,
+      "operationType": "cancellation",
+      "fundId": "3",
+      "amount": 60000,
+      "date": "2026-04-08T14:28:19.619Z",
+      "status": "confirmed",
+      "id": "v2DUq7HmjLA"
+    },
+    {
+      "userId": 1,
+      "operationType": "subscription",
+      "fundId": "1",
+      "amount": 80000,
+      "date": "2026-04-08T14:32:00.486Z",
+      "status": "confirmed",
+      "id": "uCOVAGGTUIQ"
+    },
+    {
+      "userId": 1,
+      "operationType": "subscription",
+      "fundId": "3",
+      "amount": 60000,
+      "date": "2026-04-08T14:32:22.821Z",
+      "status": "confirmed",
+      "id": "xXf5xfzOO2U"
+    },
+    {
+      "userId": 1,
+      "operationType": "cancellation",
+      "fundId": "3",
+      "amount": 60000,
+      "date": "2026-04-08T14:32:28.289Z",
+      "status": "confirmed",
+      "id": "HfpM9H_1rWQ"
+    },
+    {
+      "userId": 1,
+      "operationType": "cancellation",
+      "fundId": "1",
+      "amount": 80000,
+      "date": "2026-04-08T14:32:29.640Z",
+      "status": "confirmed",
+      "id": "YKpdtYSWJdc"
+    },
+    {
+      "userId": 1,
+      "operationType": "subscription",
+      "fundId": "1",
+      "amount": 80000,
+      "date": "2026-04-08T14:43:23.160Z",
+      "status": "confirmed",
+      "id": "E_ODTubte6I"
+    },
+    {
+      "userId": 1,
+      "operationType": "cancellation",
+      "fundId": "1",
+      "amount": 80000,
+      "date": "2026-04-08T14:43:55.827Z",
+      "status": "confirmed",
+      "id": "g7-AxyMfR6w"
+    },
+    {
+      "userId": 1,
+      "operationType": "subscription",
+      "fundId": "1",
+      "amount": 80000,
+      "date": "2026-04-08T14:59:27.715Z",
+      "status": "confirmed",
+      "id": "-rwU_VJnAww"
+    },
+    {
+      "userId": 1,
+      "operationType": "cancellation",
+      "fundId": "1",
+      "amount": 80000,
+      "date": "2026-04-08T14:59:31.486Z",
+      "status": "confirmed",
+      "id": "kDovQkE5pCE"
+    },
+    {
+      "userId": 1,
+      "operationType": "subscription",
+      "fundId": "3",
+      "amount": 60000,
+      "date": "2026-04-08T16:21:49.831Z",
+      "status": "confirmed",
+      "id": "he6WJqHPImY"
+    },
+    {
+      "userId": 1,
+      "operationType": "cancellation",
+      "fundId": "3",
+      "amount": 60000,
+      "date": "2026-04-08T16:22:00.029Z",
+      "status": "confirmed",
+      "id": "gckwcVKNxCM"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
